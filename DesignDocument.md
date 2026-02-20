@@ -20,7 +20,7 @@ The goal is to reduce decision fatigue by ranking projects according to the user
 
 ## Live Demo
 
-*(Link)*
+_(Link)_
 
 ---
 
@@ -28,20 +28,20 @@ The goal is to reduce decision fatigue by ranking projects according to the user
 
 ### Project Lifecycle Engine Projects Collection)
 
-* Create new projects with title, effort level, estimated time, and priority
-* Edit existing projects
-* Archive or delete projects
-* Mark projects as completed or abandoned
-* View and sort projects by priority or status
-* Track completion patterns over time
+- Create new projects with title, effort level, estimated time, and priority
+- Edit existing projects
+- Archive or delete projects
+- Mark projects as completed or abandoned
+- View and sort projects by priority or status
+- Track completion patterns over time
 
 ### Decision Context Engine (Profiles Collection)
 
-* Create reusable decision profiles such as "Low Energy Evening"
-* Input available time, energy level, and season
-* Receive ranked project recommendations
-* See explanation for why a project was recommended
-* Save and reuse profiles for quick selection
+- Create reusable decision profiles such as "Low Energy Evening"
+- Input available time, energy level, and season
+- Receive ranked project recommendations
+- See explanation for why a project was recommended
+- Save and reuse profiles for quick selection
 
 ---
 
@@ -63,21 +63,21 @@ Jamie frequently starts new projects but struggles to finish them. She benefits 
 
 ## User Stories
 
-### Project Lifecycle (Ideas)
+### Project Lifecycle (Projects)
 
-* As a user, I want to create projects with effort level, estimated time, and intrinsic priority, so they can be objectively evaluated later.
-* As a user, I want to edit or archive projects when my interests change, so my system stays realistic.
-* As a user, I want to mark projects as completed or abandoned with timestamps, so I can see long-term patterns.
-* As a user, I want to view completion history and completion rate, so I can reflect on how I actually use my time.
-* As a user, I want to see projects ranked by internal priority score, independent of recommendations.
+- As a user, I want to create projects with effort level, estimated time, and intrinsic priority, so they can be objectively evaluated later.
+- As a user, I want to edit or archive projects when my interests change, so my system stays realistic.
+- As a user, I want to mark projects as completed or abandoned with timestamps, so I can see long-term patterns.
+- As a user, I want to view completion history and completion rate, so I can reflect on how I actually use my time.
+- As a user, I want to see projects ranked by internal priority score, independent of recommendations.
 
 ### Decision Context (Profiles)
 
-* As a user, I want to define decision profiles (ex. “Low energy evening”, “2 free hours Saturday”), so I don’t have to think every time.
-* As a user, I want to input current constraints (time available, energy level, season), so the system can reason for me.
-* As a user, I want the app to score projects against my current context, so I receive ranked recommendations instead of raw lists.
-* As a user, I want to see why a project was recommended (time fit, season match, energy alignment), so the system feels transparent.
-* As a user, I want to save and reuse decision profiles, so choosing becomes a one-click action.
+- As a user, I want to define decision profiles (ex. “Low energy evening”, “2 free hours Saturday”), so I don’t have to think every time.
+- As a user, I want to input current constraints (time available, energy level, season), so the system can reason for me.
+- As a user, I want the app to score projects against my current context, so I receive ranked recommendations instead of raw lists.
+- As a user, I want to see why a project was recommended (time fit, season match, energy alignment), so the system feels transparent.
+- As a user, I want to save and reuse decision profiles, so choosing becomes a one-click action.
 
 ---
 
@@ -87,32 +87,32 @@ This project follows a **3-tier architecture**:
 
 ### Client
 
-* Static HTML5
-* CSS
-* Vanilla JavaScript (ES6 Modules)
-* Fetch API for REST calls
+- Static HTML5
+- CSS
+- Vanilla JavaScript (ES6 Modules)
+- Fetch API for REST calls
 
 ### Server
 
-* Node.js
-* Express.js
-* RESTful API endpoints
+- Node.js
+- Express.js
+- RESTful API endpoints
 
 #### Projects
 
-* `GET /ideas`
-* `POST /ideas`
-* `PATCH /projects/:id`
-* `DELETE /projects/:id`
+- `GET /ideas`
+- `POST /ideas`
+- `PATCH /projects/:id`
+- `DELETE /projects/:id`
 
 #### Profiles
 
-* `GET /profiles`
-* `POST /profiles`
+- `GET /profiles`
+- `POST /profiles`
 
 #### Recommendation Engine
 
-* `GET /recommend?profileId=<id>`
+- `GET /recommend?profileId=<id>`
 
 > `/recommend` is a read only computation endpoint that derives ranked results from existing collections and does not create or modify database records.
 
@@ -122,24 +122,23 @@ Two collections:
 
 #### `projects`
 
-* title
-* effort
-* estimatedTime
-* priority
-* status
-* timestamps
+- title
+- effort
+- estimatedTime
+- priority
+- status
+- timestamps
 
 #### `profiles`
 
-* name
-* season
-* timeAvailable
-* energyLevel
+- name
+- season
+- timeAvailable
+- energyLevel
 
 MongoDB runs in Docker for local development.
 
 ---
-
 
 ## Design Mockup
 
@@ -149,16 +148,15 @@ The diagram illustrates the client server database architecture and ownership se
 
 ![Weekend Project Queue Manager Architecture](docs/wireframe.png)
 
-
 ## Technologies Used
 
-* Node.js
-* Express.js
-* MongoDB (Official Node Driver)
-* HTML5
-* CSS
-* Vanilla JavaScript (ES Modules)
-* Docker
+- Node.js
+- Express.js
+- MongoDB (Official Node Driver)
+- HTML5
+- CSS
+- Vanilla JavaScript (ES Modules)
+- Docker
 
 ---
 
@@ -211,14 +209,13 @@ backend.js       → Express server entry point
 
 ## Compliance With Project Requirements
 
-* Uses Node + Express
-* Uses MongoDB (Node driver, no Mongoose)
-* Uses only vanilla JavaScript for client-side rendering
-* Implements at least two MongoDB collections with CRUD operations
-* Includes forms
-* Organized using ES Modules (no CommonJS `require`)
-* No template engines used
-
+- Uses Node + Express
+- Uses MongoDB (Node driver, no Mongoose)
+- Uses only vanilla JavaScript for client-side rendering
+- Implements at least two MongoDB collections with CRUD operations
+- Includes forms
+- Organized using ES Modules (no CommonJS `require`)
+- No template engines used
 
 ---
 
